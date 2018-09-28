@@ -124,6 +124,14 @@ onClickChat = function (event){
   return false;
 };
 //----------------- КОНЕЦ ОБРАБОТЧИКОВ СОБЫТИЙ -----------------
+    onClickChat = function (event) {
+        if (toggleChat(stateMap.is_chat_retracted)){
+            $.uriAnchor.setAnchor({
+                chat: (stateMap.is_chat_retracted ? 'open' : 'closed')
+            });
+        }
+        return false;
+    };
 
 //------------------- НАЧАЛО ОТКРЫТЫХ МЕТОДОВ ------------------
 // *** Начало открытого метода initModule ***
